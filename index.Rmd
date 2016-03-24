@@ -29,9 +29,9 @@ I was wondering wether there are any obvious patterns in the movie industry that
 ## Data cleaning - 1
 
 ```{r, echo=FALSE}
-data <- read.csv("/Users/baloghsamuel/STUDY/DATA SCIENCE/Shiny applications/movies_beta copy/Reproducible pitch/movies.csv") 
+data <- read.csv("movies.csv") 
 ```
-```{r}
+```{r, error=FALSE}
 data <- na.omit(data) # omitting NAs from the dataset
 data <- data[which(data$votes > 1000),] # omitting entries with fewer than 1000 votes
 data<- data[,c(1,2,3,4,5,6,7,19,20,21,22,23,24,25)] # selecting the appropriate columns
@@ -86,4 +86,4 @@ library(ggplot2)
 qplot(drama$year, drama$length, xlab = "Year", ylab = "Length (minutes)")
 ```
 
-Here we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
+We can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 

@@ -29,44 +29,14 @@ I was wondering wether there are any obvious patterns in the movie industry that
 ## Data cleaning - 1
 
 
-```
-## Warning in file(file, "rt"): cannot open file '/Users/baloghsamuel/STUDY/
-## DATA SCIENCE/Shiny applications/movies_beta copy/Reproducible pitch/
-## movies.csv': No such file or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
-```
 
 ```r
 data <- na.omit(data) # omitting NAs from the dataset
 data <- data[which(data$votes > 1000),] # omitting entries with fewer than 1000 votes
-```
-
-```
-## Error in data$votes: object of type 'closure' is not subsettable
-```
-
-```r
 data<- data[,c(1,2,3,4,5,6,7,19,20,21,22,23,24,25)] # selecting the appropriate columns
-```
-
-```
-## Error in data[, c(1, 2, 3, 4, 5, 6, 7, 19, 20, 21, 22, 23, 24, 25)]: object of type 'closure' is not subsettable
-```
-
-```r
 # columns 21-25 represent the genre and are binary variables
 
 write.csv(data, "movies_cleaned.csv") # saving the dataset
-```
-
-```
-## Error in as.data.frame.default(x[[i]], optional = TRUE): cannot coerce class ""function"" to a data.frame
-```
-
-```r
 data <- read.csv("movies_cleaned.csv") # working with the cleaned dataset
 # I have created seperate dataframes for each genre
 action <- data[which(data$Action == 1), ]
@@ -121,4 +91,4 @@ qplot(drama$year, drama$length, xlab = "Year", ylab = "Length (minutes)")
 
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5-1.png)
 
-Here we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
+ere we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
