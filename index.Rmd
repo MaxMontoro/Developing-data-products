@@ -86,4 +86,4 @@ library(ggplot2)
 qplot(drama$year, drama$length, xlab = "Year", ylab = "Length (minutes)")
 ```
 
-For instance, here we can observe than the excuciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
+Here we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
