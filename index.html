@@ -73,13 +73,36 @@
     <h2>Data cleaning - 1</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">data &lt;- na.omit(data) # omitting NAs from the dataset
+    <pre><code>## Warning in file(file, &quot;rt&quot;): cannot open file &#39;/Users/baloghsamuel/STUDY/
+## DATA SCIENCE/Shiny applications/movies_beta copy/Reproducible pitch/
+## movies.csv&#39;: No such file or directory
+</code></pre>
+
+<pre><code>## Error in file(file, &quot;rt&quot;): cannot open the connection
+</code></pre>
+
+<pre><code class="r">data &lt;- na.omit(data) # omitting NAs from the dataset
 data &lt;- data[which(data$votes &gt; 1000),] # omitting entries with fewer than 1000 votes
-data&lt;- data[,c(1,2,3,4,5,6,7,19,20,21,22,23,24,25)] # selecting the appropriate columns
-# columns 21-25 represent the genre and are binary variables
+</code></pre>
+
+<pre><code>## Error in data$votes: object of type &#39;closure&#39; is not subsettable
+</code></pre>
+
+<pre><code class="r">data&lt;- data[,c(1,2,3,4,5,6,7,19,20,21,22,23,24,25)] # selecting the appropriate columns
+</code></pre>
+
+<pre><code>## Error in data[, c(1, 2, 3, 4, 5, 6, 7, 19, 20, 21, 22, 23, 24, 25)]: object of type &#39;closure&#39; is not subsettable
+</code></pre>
+
+<pre><code class="r"># columns 21-25 represent the genre and are binary variables
 
 write.csv(data, &quot;movies_cleaned.csv&quot;) # saving the dataset
-data &lt;- read.csv(&quot;movies_cleaned.csv&quot;) # working with the cleaned dataset
+</code></pre>
+
+<pre><code>## Error in as.data.frame.default(x[[i]], optional = TRUE): cannot coerce class &quot;&quot;function&quot;&quot; to a data.frame
+</code></pre>
+
+<pre><code class="r">data &lt;- read.csv(&quot;movies_cleaned.csv&quot;) # working with the cleaned dataset
 # I have created seperate dataframes for each genre
 action &lt;- data[which(data$Action == 1), ]
 animation &lt;- data[which(data$Animation == 1), ]
@@ -142,7 +165,7 @@ qplot(drama$year, drama$length, xlab = &quot;Year&quot;, ylab = &quot;Length (mi
 
 <p><img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"></p>
 
-<p>For instance, here we can observe than the excuciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. </p>
+<p>Here we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. </p>
 
   </article>
   <!-- Presenter Notes -->
