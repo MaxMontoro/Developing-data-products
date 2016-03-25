@@ -92,3 +92,4 @@ qplot(drama$year, drama$length, xlab = "Year", ylab = "Length (minutes)")
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5-1.png)
 
 We can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
+Thank you for your attention!
