@@ -12,7 +12,7 @@ knit        : slidify::knit2slides
 ---
 ## IMDB movie ratings visualization
 
-I was wondering wether there are any obvious patterns in the movie industry that can be easily grasped using a few graphs in R, so I tried to **visualize the IMDB movie dataset** that is included in the datasets R package, and which is also available here: *http://vincentarelbundock.github.io/Rdatasets/*
+I was wondering whether there are any obvious patterns in the movie industry that can be easily grasped using a few graphs in R, so I tried to make an app to **visualize the IMDB movie dataset** that is included in the datasets R package, and which is also available here: *http://vincentarelbundock.github.io/Rdatasets/*
 
 ### The data
 
