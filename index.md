@@ -1,5 +1,5 @@
 ---
-title       : IMDB dataset visualization using a Shiny application
+title       : IMDB dataset visualization with R and Shiny
 subtitle    : Developing Data Products course project
 author      : Samuel Balogh
 job         : 
@@ -12,7 +12,7 @@ knit        : slidify::knit2slides
 ---
 ## IMDB movie ratings visualization
 
-I was wondering wether there are any obvious patterns in the movie industry that can be easily grasped using a few graphs in R, so I tried to **visualize the IMDB movie dataset** that is included in the datasets R package, and which is also available here: *http://vincentarelbundock.github.io/Rdatasets/*
+I was wondering whether there are any obvious patterns in the movie industry that can be easily grasped using a few graphs in R, so I tried to make an app to **visualize the IMDB movie dataset** that is included in the datasets R package, and which is also available here: *http://vincentarelbundock.github.io/Rdatasets/*
 
 ### The data
 
@@ -91,4 +91,4 @@ qplot(drama$year, drama$length, xlab = "Year", ylab = "Length (minutes)")
 
 ![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5-1.png)
 
-ere we can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 
+We can observe than the excruciatingly long (longer than 3 and a half hours) drama movies only appeared later in the 20th century. 

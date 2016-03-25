@@ -1,5 +1,5 @@
 ---
-title       : IMDB dataset visualization using a Shiny application
+title       : IMDB dataset visualization with R and Shiny
 subtitle    : Developing Data Products course project
 author      : Samuel Balogh
 job         : 
